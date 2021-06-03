@@ -50,14 +50,14 @@ public class Person {
     //this method will change the speed of the bobs depending on their age
     public void age(){
         for(int b=0; b<bobs.size(); b++){
-            
+            //if number of hibernations increases by 1, increase age by 1
         }
     }
     
     public void energyLevel(){
         for(int j=0; j<bobs.size(); j++){
             if(energy>1000){
-            //add code to drop trail of food here
+            //add code to drop trail of food here (move to separate bob class?)
             bobs.get(j);
             }
             if(energy==0){
@@ -70,7 +70,6 @@ public class Person {
                 bobcolor=Color.CYAN;
             }
         }
-        
     }
     
 }
