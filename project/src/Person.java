@@ -10,7 +10,7 @@ public class Person {
     private boolean alive = true;
     private Color bobcolor;
     private int age;
-    private final double size = 15;
+    private double size;
     
     public Person(double x, double y, ArrayList<Person> bobs){
         energy=500;
@@ -20,6 +20,7 @@ public class Person {
         alive = true;
         bobcolor=Color.CYAN;
         age=0;
+        size=15;
     }
     
     public int getEnergy(){
