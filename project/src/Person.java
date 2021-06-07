@@ -57,10 +57,6 @@ public class Person {
     
     public void energyLevel(){
         for(int j=0; j<bobs.size(); j++){
-            if(energy>1000){
-            //add code to drop trail of food here (move to separate bob class?)
-            bobs.get(j);
-            }
             if(energy==0){
                 dead();
             }
