@@ -36,11 +36,11 @@ public class Person {
         return y;
     }
     
-    public int integerX(){
+    public int intX(){
         return (int)x;
     }
     
-    public int integerY(){
+    public int intY(){
         return (int)y;
     }
     
@@ -95,7 +95,7 @@ public class Person {
         return size;
     }
     
-    public int integerSize(){
+    public int intSize(){
         return (int)size;
     }
     
@@ -130,6 +130,6 @@ public class Person {
     
     public void create(Graphics draw){
         draw.setColor(getColor());
-        draw.fillRect(integerX(), integerY(), integerSize(), integerSize());
+        draw.fillRect(intX(), intY(), intSize(), intSize());
     
 }
