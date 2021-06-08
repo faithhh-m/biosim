@@ -32,20 +32,12 @@ public class Person {
         return y;
     }
     
-    public int integerX(){
-        return (int)x;
-    }
-    
-    public int integerY(){
-        return (int)y;
-    }
-    
     public void move(){
         x+=speed*Math.cos(Math.toRadians(direction));
         y+=speed*Math.sin(Math.toRadians(direction));
     }
     
-    public double direction(){
+    public double getDirection(){
         return direction;
     }
     
@@ -69,11 +61,11 @@ public class Person {
         energy--;
     }
     
-    public boolean alive(){
+    public boolean isThisAlive(){
         return alive;
     }
     
-    public void dead(){
+    public void isDead(){
         alive = false;
     }
     
@@ -85,12 +77,8 @@ public class Person {
         bobcolor=newcolor;
     }
     
-    public double size(){
+    public double getSize(){
         return size;
-    }
-    
-    public int integerSize(){
-        return (int)size;
     }
     
     public void changeSize(double newsize){
@@ -118,11 +106,11 @@ public class Person {
     }
     
     public void energyLevel(){
-        decreaseEnergy();
+        energy--;
     }
     
     public void create(Graphics draw){
         draw.setColor(getColor());
-        draw.fillRect(integerX(), integerY(), integerSize(), integerSize());
+        //draw.fillRect
     
 }
