@@ -21,7 +21,11 @@ public class Person {
         alive = true;
         bobcolor=Color.CYAN;
         age=0;
-        size=15;
+        size=20;
+    }
+    
+    public ArrayList<Person> objects(){
+        return bobs;
     }
     
     public double getX(){
@@ -81,7 +85,7 @@ public class Person {
         return bobcolor;
     }
     
-    public void newcolor(Color newcolor){
+    public void newColor(Color newcolor){
         bobcolor=newcolor;
     }
     
