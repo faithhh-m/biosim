@@ -42,7 +42,7 @@ public class Person {
     }
     
     public void increaseHibernations(){
-        //add code to increase number of hibernations here
+        hibernations++;
     }
     
     public int getHibernations(){
