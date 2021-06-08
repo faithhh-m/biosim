@@ -32,6 +32,14 @@ public class Person {
         return y;
     }
     
+    public int integerX(){
+        return (int)x;
+    }
+    
+    public int integerY(){
+        return (int)y;
+    }
+    
     public void move(){
         x+=speed*Math.cos(Math.toRadians(direction));
         y+=speed*Math.sin(Math.toRadians(direction));
@@ -81,6 +89,10 @@ public class Person {
         return size;
     }
     
+    public int integerSize(){
+        return (int)size;
+    }
+    
     public void changeSize(double newsize){
         size = newsize;
     }
@@ -105,12 +117,13 @@ public class Person {
         }
     }
     
+    @Override
     public void energyLevel(){
         energy--;
     }
     
     public void create(Graphics draw){
         draw.setColor(getColor());
-        //draw.fillRect
+        draw.fillRect(integerX(), integerY(), integerSize(), integerSize());
     
 }
