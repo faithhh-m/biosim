@@ -124,6 +124,10 @@ public class Person {
         }
     }
     
+    public void spawn(){
+        //use math.random to calculate probability of spawning
+    }
+    
     public void energyLevel(){
         decreaseEnergy();
     }
