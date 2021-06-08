@@ -11,7 +11,8 @@ public class Bob extends Person {
    public void doSomething(){
        move();
        energyLevel();
-       eat;
+       eat();
+       age();
    }
    
    @Override
