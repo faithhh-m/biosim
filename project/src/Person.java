@@ -117,7 +117,6 @@ public class Person {
         }
     }
     
-    @Override
     public void energyLevel(){
         energy--;
     }
