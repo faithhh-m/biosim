@@ -118,7 +118,7 @@ public class Person {
     }
     
     public void energyLevel(){
-        energy--;
+        decreaseEnergy();
     }
     
     public void create(Graphics draw){
