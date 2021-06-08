@@ -61,6 +61,8 @@ public class Person {
         return hibernations;
     }
     
+    //write a boolean method that returns true when the hibernation has ended. to be used in the age method
+    
     public void doSomething(){
         move;
     }
@@ -118,6 +120,7 @@ public class Person {
     public void age(){
         for(int b=0; b<bobs.size(); b++){
             //if number of hibernations increases by 1, increase age by 1
+            //use conditions to change speed
         }
     }
     
