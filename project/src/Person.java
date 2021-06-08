@@ -11,6 +11,7 @@ public class Person {
     private Color bobcolor;
     private int age;
     private double size;
+    private int hibernations;
     
     public Person(double x, double y, ArrayList<Person> bobs){
         energy=500;
@@ -23,8 +24,41 @@ public class Person {
         size=15;
     }
     
+    public double getX(){
+        return x;
+    }
+    
+    public double getY(){
+        return y;
+    }
+    
+    public void move(){
+        x+=speed*Math.cos(Math.toRadians(direction));
+        y+=speed*Math.sin(Math.toRadians(direction));
+    }
+    
+    public double direction(){
+        return direction;
+    }
+    
+    public void increaseHibernations(){
+        //add code to increase number of hibernations here
+    }
+    
+    public int getHibernations(){
+        return hibernations;
+    }
+    
+    public void doSomething(){
+        move;
+    }
+    
     public int getEnergy(){
         return energy;
+    }
+    
+    public void decreaseEnergy(){
+        energy--;
     }
     
     public boolean alive(){
@@ -35,20 +69,36 @@ public class Person {
         alive = false;
     }
     
+    public Color getColor(){
+        return bobcolor;
+    }
+    
+    public void newcolor(Color newcolor){
+        bobcolor=newcolor;
+    }
+    
+    public double size(){
+        return size;
+    }
+    
+    public void changeSize(double newsize){
+        size = newsize;
+    }
+    
     public int distance(Person bob){
         int distance = 0; //fix this!!!
         return distance;
     }
     
     //will check if bob has bumped into food. if so, eat food
-    public void bump(){
+    public void eat(){
         for(int k=0;k<bobs.size()-1;k++){
             Person thisBob = bobs.get(k);
             //requires the distance method
         }
     }
     
-    //this method will change the speed of the bobs depending on their age
+    //this method will change the speed of the bobs depending on their age. will also increase age
     public void age(){
         for(int b=0; b<bobs.size(); b++){
             //if number of hibernations increases by 1, increase age by 1
@@ -56,17 +106,11 @@ public class Person {
     }
     
     public void energyLevel(){
-        for(int j=0; j<bobs.size(); j++){
-            if(energy==0){
-                dead();
-            }
-            else if(energy<=100){
-                bobcolor=Color.RED;
-            }
-            else{
-                bobcolor=Color.CYAN;
-            }
-        }
+        energy--;
     }
+    
+    public void create(Graphics draw){
+        draw.setColor(getColor());
+        //draw.fillRect
     
 }
