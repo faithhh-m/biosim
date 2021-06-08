@@ -13,6 +13,7 @@ public class Bob extends Person {
    
    @Override
    public void energyLevel(){
+       decreaseEnergy();
        for(int k=0; k<bobs.size(); k++){
            if(bobs.get(k).getEnergy()>1000){
                //add code to drop trail of food here, requires food class to be coded
