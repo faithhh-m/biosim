@@ -7,8 +7,11 @@ public class Bob extends Person {
        super(x, y, bobs);
    }
    
+    @Override
    public void doSomething(){
-       //do something
+       move();
+       energyLevel();
+       eat;
    }
    
    @Override
