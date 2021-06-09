@@ -77,6 +77,10 @@ public class Person {
         energy--;
     }
     
+    public int getAge(){
+        return age;
+    }
+    
     public boolean alive(){
         return alive;
     }
