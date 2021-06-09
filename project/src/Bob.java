@@ -18,15 +18,15 @@ public class Bob extends Person {
    @Override
    public void energyLevel(){
        decreaseEnergy();
-       for(int k=0; k<bobs.size(); k++){
-           if(bobs.get(k).getEnergy()>1000){
+       for(int k=0; k<objects().size(); k++){
+           if(objects().get(k).getEnergy()>1000){
                //add code to drop trail of food here, requires food class to be coded
            }
-           else if(bobs.get(k).getEnergy()==0){
+           else if(objects().get(k).getEnergy()==0){
                dead();
            }
-           else if(bobs.get(k).getEnergy()<=100){
-               bobs.get(k).newcolor(Color.RED);
+           else if(objects().get(k).getEnergy()<=100){
+               objects().get(k).newColor(Color.RED);
            }
        }
    }
