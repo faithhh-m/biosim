@@ -7,7 +7,6 @@ public class Bob extends Person {
        super(x, y, bobs);
    }
    
-   @Override
    public void spawn(){
        if(getAge()>=3){
            double probability = Math.random();
