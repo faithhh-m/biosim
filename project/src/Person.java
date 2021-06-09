@@ -6,6 +6,8 @@ public class Person {
     private int energy;
     private double x;
     private double y;
+    private double direction;
+    private double speed;
     private ArrayList<Person> bobs;
     private boolean alive = true;
     private Color bobcolor;
@@ -125,7 +127,7 @@ public class Person {
     }
     
     public void spawn(){
-        //use math.random to calculate probability of spawning
+        //spawn bobs
     }
     
     public void energyLevel(){
