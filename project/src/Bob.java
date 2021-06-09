@@ -9,9 +9,11 @@ public class Bob extends Person {
    
    @Override
    public void spawn(){
-       double probability = Math.random();
-       if(probability<=0.4){
-           //spawn
+       if(getAge()>=3){
+           double probability = Math.random();
+           if(probability<=0.6){
+               createObject();
+           }
        }
    }
     
