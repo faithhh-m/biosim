@@ -48,22 +48,22 @@ public class Person {
     
     public void move(){
         x+=speed*Math.cos(Math.toRadians(direction));
-        y+=speed*Math.sin(Math.toRadians(direction));
+        y+=-1*speed*Math.sin(Math.toRadians(direction));
     }
     
     public double direction(){
         return direction;
     }
     
-    public void increaseHibernations(){
+    //check this method!
+    public boolean increaseHibernations(){
         hibernations++;
+        return true;
     }
     
     public int getHibernations(){
         return hibernations;
     }
-    
-    //write a boolean method that returns true when the hibernation has ended. to be used in the age method
     
     public void doSomething(){
         move;
@@ -112,22 +112,41 @@ public class Person {
     
     //will check if bob has bumped into food. if so, eat food
     public void eat(){
-        for(int k=0;k<bobs.size()-1;k++){
-            Person thisBob = bobs.get(k);
+        for(int k=0;k<objects().size()-1;k++){
+            Person thisBob = objects().get(k);
             //requires the distance method
         }
     }
     
     //this method will change the speed of the bobs depending on their age. will also increase age
     public void age(){
-        for(int b=0; b<bobs.size(); b++){
-            //if number of hibernations increases by 1, increase age by 1
-            //use conditions to change speed
+        for(int b=0; b<objects().size(); b++){
+            if(increaseHibernations()==true){
+                age++;
+            }
+            switch (age){
+                case 6: //kill when age is 6
+                    dead();
+                    break;
+                case 5: //when age is 5
+                    //change speed
+                    break;
+                case 4: //when age is 4
+                    //change speed
+                    break;
+                case 3: //when age is 3
+                    //change speed
+                    break;
+                default: //if age is not equal to 5, 4, or 3, nothing changes.
+                    break;
+            }
         }
     }
     
-    public void spawn(){
-        //spawn bobs
+    //check this method
+    public void createObject(){
+        Person spawn = new Person(x,y,bobs);
+        bobs.add(spawn);
     }
     
     public void energyLevel(){
