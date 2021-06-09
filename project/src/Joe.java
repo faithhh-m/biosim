@@ -9,6 +9,14 @@ public class Joe extends Person{
     }
     
     @Override
+    public void spawn(){
+        double probability = Math.random();
+        if(probability<=0.6){
+            //spawn
+        }
+    }
+    
+    @Override
     public void doSomething(){
         move();
         energyLevel();
@@ -19,12 +27,12 @@ public class Joe extends Person{
     @Override
     public void energyLevel(){
         decreaseEnergy();
-        for(int k=0; k<bobs.size(); k++){
-            if(bobs.get(k).getEnergy()==0){
+        for(int k=0; k<objects().size(); k++){
+            if(objects().get(k).getEnergy()==0){
                 dead();
             }
-            else if(bobs.get(k).getEnergy()<=100){
-                bobs.get(k).newColor(Color.DARK_GRAY);
+            else if(objects().get(k).getEnergy()<=100){
+                objects().get(k).newColor(Color.DARK_GRAY);
             }
         }
     }
