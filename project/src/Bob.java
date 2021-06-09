@@ -7,7 +7,15 @@ public class Bob extends Person {
        super(x, y, bobs);
    }
    
-    @Override
+   @Override
+   public void spawn(){
+       double probability = Math.random();
+       if(probability<=0.4){
+           //spawn
+       }
+   }
+    
+   @Override
    public void doSomething(){
        move();
        energyLevel();
