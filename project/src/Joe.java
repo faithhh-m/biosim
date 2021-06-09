@@ -8,11 +8,12 @@ public class Joe extends Person{
         newColor(Color.MAGENTA);
     }
     
-    @Override
     public void spawn(){
-        double probability = Math.random();
-        if(probability<=0.6){
-            //spawn
+        if(getAge()>=3){
+            double probability = Math.random();
+            if(probability<=0.6){
+                createObject();
+            }
         }
     }
     
