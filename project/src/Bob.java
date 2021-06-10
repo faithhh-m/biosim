@@ -17,6 +17,12 @@ public class Bob extends Person {
    }
     
    @Override
+   public void createObject(){
+       Person spawn = new Bob(getX(), getY(), objects());
+       objects().add(spawn);
+   }
+   
+   @Override
    public void doSomething(){
        move();
        energyLevel();
