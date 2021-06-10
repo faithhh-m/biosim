@@ -3,26 +3,45 @@ import java.util.ArrayList;
 
 public class Bob extends Person {
     
-   public Bob(double x, double y, ArrayList<Person> bobs){
-       super(x, y, bobs);
+   public Bob(double x, double y, ArrayList<Person> actors){
+       super(x, y, actors);
    }
    
+   public void spawn(){
+       if(getAge()>=3){
+           double probability = Math.random();
+           if(probability<=0.4){
+               createObject();
+           }
+       }
+   }
+   
+   @Override
+   public void createObject(){
+       Person spawn = new Bob(getX(), getY(), actors());
+       actors.add(spawn);
+   }
+   
+   @Override
    public void doSomething(){
-       //do something
+       move();
+       energyLevel();
+       eat();
+       age();
    }
    
    @Override
    public void energyLevel(){
        decreaseEnergy();
-       for(int k=0; k<bobs.size(); k++){
-           if(bobs.get(k).getEnergy()>1000){
+       for(int k=0; k<actors.size(); k++){
+           if(actors.get(k).getEnergy()>1000){
                //add code to drop trail of food here, requires food class to be coded
            }
-           else if(bobs.get(k).getEnergy()==0){
-               dead();
+           else if(actors.get(k).getEnergy()==0){
+               isDead();
            }
-           else if(bobs.get(k).getEnergy()<=100){
-               bobs.get(k).newcolor(Color.RED);
+           else if(actors.get(k).getEnergy()<=100){
+               actors.get(k).newcolor(Color.RED);
            }
        }
    }
