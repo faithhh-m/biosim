@@ -36,7 +36,7 @@ public class Bob extends Person {
        decreaseEnergy();
        for(int k=0; k<objects().size(); k++){
            if(objects().get(k).getEnergy()>1000){
-               //add code to drop trail of food here, requires food class to be coded
+               //add code to share food here, may require food class to be coded first
            }
            else if(objects().get(k).getEnergy()==0){
                dead();
