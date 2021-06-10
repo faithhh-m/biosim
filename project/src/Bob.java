@@ -35,7 +35,7 @@ public class Bob extends Person {
        decreaseEnergy();
        for(int k=0; k<actors.size(); k++){
            if(actors.get(k).getEnergy()>1000){
-               //add code to drop trail of food here, requires food class to be coded
+               //add code to share food here, requires food class to be coded
            }
            else if(actors.get(k).getEnergy()==0){
                isDead();
