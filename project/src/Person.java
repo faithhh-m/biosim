@@ -141,7 +141,7 @@ public class Person {
                 case 3: //when age is 3
                     //change speed
                     break;
-                default: //if age is not equal to 5, 4, or 3, nothing changes.
+                default: //if age is 2, 1 or 0, nothing changes.
                     break;
             }
         }
