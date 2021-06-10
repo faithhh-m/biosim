@@ -81,7 +81,7 @@ public class Person {
         return age;
     }
     
-    public boolean alive(){
+    public boolean getAlive(){
         return alive;
     }
     
