@@ -3,8 +3,8 @@ import java.util.ArrayList;
 
 public class Bob extends Person {
     
-   public Bob(double x, double y, ArrayList<Person> bobs){
-       super(x, y, bobs);
+   public Bob(double x, double y, ArrayList<Person> actors){
+       super(x, y, actors);
    }
    
    public void spawn(){
@@ -19,8 +19,8 @@ public class Bob extends Person {
    //check this method
    @Override
    public void createObject(){
-       Person spawn = new Bob(getX(), getY(), objects());
-       objects().add(spawn);
+       Person spawn = new Bob(getX(), getY(), actors());
+       actors().add(spawn);
    }
    
    @Override
@@ -34,15 +34,15 @@ public class Bob extends Person {
    @Override
    public void energyLevel(){
        decreaseEnergy();
-       for(int k=0; k<objects().size(); k++){
-           if(objects().get(k).getEnergy()>1000){
+       for(int k=0; k<actors().size(); k++){
+           if(actors().get(k).getEnergy()>1000){
                //add code to share food here, may require food class to be coded first
            }
-           else if(objects().get(k).getEnergy()==0){
+           else if(actors().get(k).getEnergy()==0){
                dead();
            }
-           else if(objects().get(k).getEnergy()<=100){
-               objects().get(k).newColor(Color.RED);
+           else if(actors().get(k).getEnergy()<=100){
+               actors().get(k).newColor(Color.RED);
            }
        }
    }
