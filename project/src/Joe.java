@@ -18,6 +18,12 @@ public class Joe extends Person{
     }
     
     @Override
+    public void createObject(){
+        Person spawn = new Joe(getX(), getY(), objects());
+        objects().add(spawn);
+    }
+    
+    @Override
     public void doSomething(){
         move();
         energyLevel();
