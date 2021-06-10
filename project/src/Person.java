@@ -8,26 +8,26 @@ public class Person {
     private double y;
     private double direction;
     private double speed;
-    private ArrayList<Person> bobs;
+    private ArrayList<Person> actors;
     private boolean alive = true;
     private Color bobcolor;
     private int age;
     private double size;
     private int hibernations;
     
-    public Person(double x, double y, ArrayList<Person> bobs){
+    public Person(double x, double y, ArrayList<Person> actors){
         energy=500;
         this.x=x;
         this.y=y;
-        this.bobs=bobs;
+        this.actors=actors;
         alive = true;
         bobcolor=Color.CYAN;
         age=0;
         size=20;
     }
     
-    public ArrayList<Person> objects(){
-        return bobs;
+    public ArrayList<Person> actors(){
+        return actors;
     }
     
     public double getX(){
@@ -116,15 +116,15 @@ public class Person {
     
     //will check if bob has bumped into food. if so, eat food
     public void eat(){
-        for(int k=0;k<objects().size()-1;k++){
-            Person thisBob = objects().get(k);
+        for(int k=0;k<actors().size()-1;k++){
+            Person thisBob = actors().get(k);
             //requires the distance method
         }
     }
     
     //this method will change the speed of the bobs depending on their age. will also increase age
     public void age(){
-        for(int b=0; b<objects().size(); b++){
+        for(int b=0; b<actors().size(); b++){
             if(increaseHibernations()==true){
                 age++;
             }
@@ -149,8 +149,8 @@ public class Person {
     
     //check this method
     public void createObject(){
-        Person spawn = new Person(x,y,bobs);
-        bobs.add(spawn);
+        Person spawn = new Person(x,y,actors);
+        actors.add(spawn);
     }
     
     public void energyLevel(){
