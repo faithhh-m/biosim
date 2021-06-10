@@ -17,6 +17,7 @@ public class Joe extends Person{
         }
     }
     
+    //check this method
     @Override
     public void createObject(){
         Person spawn = new Joe(getX(), getY(), objects());
