@@ -3,8 +3,8 @@ import java.awt.Color;
 
 public class Joe extends Person{
     
-    public Joe(double x, double y, ArrayList<Person> bobs){
-        super(x,y,bobs);
+    public Joe(double x, double y, ArrayList<Person> actors){
+        super(x,y,actors);
         newColor(Color.MAGENTA);
     }
     
@@ -20,8 +20,8 @@ public class Joe extends Person{
     //check this method
     @Override
     public void createObject(){
-        Person spawn = new Joe(getX(), getY(), objects());
-        objects().add(spawn);
+        Person spawn = new Joe(getX(), getY(), actors());
+        actors().add(spawn);
     }
     
     @Override
@@ -35,12 +35,12 @@ public class Joe extends Person{
     @Override
     public void energyLevel(){
         decreaseEnergy();
-        for(int k=0; k<objects().size(); k++){
-            if(objects().get(k).getEnergy()==0){
+        for(int k=0; k<actors().size(); k++){
+            if(actors().get(k).getEnergy()==0){
                 dead();
             }
-            else if(objects().get(k).getEnergy()<=100){
-                objects().get(k).newColor(Color.DARK_GRAY);
+            else if(actors().get(k).getEnergy()<=100){
+                actors().get(k).newColor(Color.DARK_GRAY);
             }
         }
     }
