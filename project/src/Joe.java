@@ -46,4 +46,8 @@ public class Joe extends Person{
         }
     }
     
+    @Override
+    public void create(Graphics draw){
+        draw.setColor(getColor());
+        draw.fillRect(intX(), intY(), intSize(), intSize());
 }
