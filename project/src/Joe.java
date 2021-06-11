@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.awt.Color;
+import java.awt.Graphics;
 
 public class Joe extends Person{
     
@@ -43,6 +44,12 @@ public class Joe extends Person{
                 actors().get(k).newColor(Color.DARK_GRAY);
             }
         }
+    }
+    
+    @Override
+    public void create(Graphics draw){
+        draw.setColor(getColor());
+        draw.fillRect(intX(), intY(), intSize(), intSize());
     }
     
 }
