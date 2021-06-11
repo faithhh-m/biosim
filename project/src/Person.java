@@ -23,7 +23,7 @@ public class Person {
         alive = true;
         bobcolor=Color.CYAN;
         age=0;
-        size=15;
+        size=20;
     }
     
     public double getX(){
