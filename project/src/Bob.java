@@ -1,5 +1,6 @@
 import java.awt.Color;
 import java.util.ArrayList;
+import java.awt.Graphics;
 
 public class Bob extends Person {
     
@@ -45,4 +46,10 @@ public class Bob extends Person {
            }
        }
    }
+    
+   @Override
+    public void create(Graphics draw){
+        draw.setColor(getColor());
+        draw.fillRect(intX(), intY(), intSize(), intSize());
+    }
 }
