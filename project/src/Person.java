@@ -117,16 +117,29 @@ public class Person {
         size = newsize;
     }
     
-    public int distance(Person bob){
-        int distance = 0; //fix this!!!
+    public double distance(Person bob){
+        if(bob==null){
+            return -1;
+        }
+        return distance(bob.getX(), bob.getY());
+    }
+    
+    public double distance(double x, double y){
+        double distanceX=this.x-x;
+        double distanceY=this.y-y;
+        double distance = Math.pow((distanceX*distanceX+distanceY*distanceY), 0.5);
         return distance;
     }
     
     //will check if bob has bumped into food. if so, eat food
     public void eat(){
         for(int k=0;k<actors.size()-1;k++){
-            Person thisBob = actors.get(k);
-            //requires the distance method
+            Person thisActor = actors.get(k);
+            if(thisActor instanceof Food && thisActor.isThisAlive()){
+                if(distance(thisActor)<thisActor.getSize()){
+                    thisActor.isDead();
+                }
+            }
         }
     }
     
