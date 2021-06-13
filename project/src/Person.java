@@ -66,7 +66,7 @@ public class Person {
     }
     
     public void doSomething(){
-        move;
+        move();
     }
     
     public int getEnergy(){
