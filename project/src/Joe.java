@@ -38,6 +38,7 @@ public class Joe extends Person{
         energyLevel();
         eat();
         age();
+        movement();
     }
     
     @Override
