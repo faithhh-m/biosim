@@ -12,8 +12,9 @@ public class Joe extends Person{
     public void spawn(){
         if(getAge()>=3){
             double probability = Math.random();
-            if((probability<=0.6)&&(getEnergy()>=1000){
+            if((probability<=0.6)&&(getEnergy()>=900){
                 createObject();
+                setEnergy(600);
             }
         }
     }
