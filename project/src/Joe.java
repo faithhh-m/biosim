@@ -18,6 +18,13 @@ public class Joe extends Person{
         }
     }
     
+    public void movement(){
+        if(distance(400,300)>350){
+           double center = setDirection(400,300);
+           setDirection(center);
+       }
+    }
+    
     //check this method
     @Override
     public void createObject(){
@@ -49,5 +56,5 @@ public class Joe extends Person{
     @Override
     public void create(Graphics draw){
         draw.setColor(getColor());
-        draw.fillRect(intX(), intY(), intSize(), intSize());
+        draw.fillOval(intX(), intY(), intSize(), intSize());
 }
