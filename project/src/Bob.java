@@ -16,6 +16,13 @@ public class Bob extends Person {
        }
    }
    
+   public void movement(){
+       if(distance(400,300)>350){
+           double center = setDirection(400,300);
+           setDirection(center);
+       }
+   }
+    
    //check this method
    @Override
    public void createObject(){
