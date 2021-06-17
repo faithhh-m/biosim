@@ -24,6 +24,7 @@ public class Person {
         bobcolor=Color.CYAN;
         age=0;
         size=20;
+        speed=1.0;
     }
     
     public ArrayList<Person> actors(){
@@ -55,6 +56,36 @@ public class Person {
         return direction;
     }
     
+    public double fixDirection(double angle){
+        do{
+            angle+=360;
+        }while(angle<0);
+        do{
+            angle-=360;
+        }while(angle>360);
+        return angle;
+    }
+    
+    public double setDirection(double x, double y){
+        double distanceX = x-this.x;
+        double distanceY = -(y-this.y);
+        double radian = Math.atan2(distanceX, distanceY);
+        double angle = Math.toRadians(radian);
+        return fixDirection(angle);
+    }
+    
+    public void setDirection(double newDirection){
+        direction = newDirection;
+    }
+    
+    public double getSpeed(){
+        return speed;
+    }
+    
+    public void setSpeed(double newSpeed){
+        speed = newSpeed;
+    }
+    
     //check this method!
     public boolean increaseHibernations(){
         hibernations++;
@@ -75,6 +106,10 @@ public class Person {
     
     public void decreaseEnergy(){
         energy--;
+    }
+    
+    public void setEnergy(int newEnergy){
+        energy = newEnergy;
     }
     
     public int getAge(){
@@ -146,13 +181,13 @@ public class Person {
                     dead();
                     break;
                 case 5: //when age is 5
-                    //change speed
+                    setSpeed(0.4);
                     break;
                 case 4: //when age is 4
-                    //change speed
+                    setSpeed(0.6);
                     break;
                 case 3: //when age is 3
-                    //change speed
+                    setSpeed(0.8);
                     break;
                 default: //if age is 2, 1 or 0, nothing changes.
                     break;
