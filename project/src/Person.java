@@ -172,6 +172,6 @@ public class Person {
     
     public void create(Graphics draw){
         draw.setColor(getColor());
-        draw.fillRect(intX(), intY(), intSize(), intSize());
+        draw.fillOval(intX(), intY(), intSize(), intSize());
     
 }
