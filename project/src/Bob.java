@@ -29,6 +29,7 @@ public class Bob extends Person {
        energyLevel();
        eat();
        age();
+       movement();
    }
    
    @Override
