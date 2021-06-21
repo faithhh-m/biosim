@@ -46,6 +46,10 @@ public class Bob extends Person {
        for(int k=0; k<actors().size(); k++){
            if(actors().get(k).getEnergy()>1000){
                //add code to share food here, may require food class to be coded first
+               while(actors().get(k).getEnergy()>900){
+                   Person food = new Food(getX(), getY(), actors());
+                   changeEnergy();
+               }
            }
            else if(actors().get(k).getEnergy()==0){
                dead();
