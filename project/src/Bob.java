@@ -26,7 +26,6 @@ public class Bob extends Person {
        }
    }
     
-   //check this method
    @Override
    public void createObject(){
        Person spawn = new Bob(getX(), getY(), actors());
@@ -55,5 +54,11 @@ public class Bob extends Person {
                actors().get(k).newColor(Color.RED);
            }
        }
+   }
+   
+   @Override
+   public void create(Graphics draw){
+       draw.setColor(getColor());
+       draw.fillOval(intX(), intY(), intSize(), intSize());
    }
 }
