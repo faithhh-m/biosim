@@ -28,7 +28,6 @@ public class Bob extends Person {
    @Override
    public void createObject(){
        Person spawn = new Bob(getX(), getY(), actors());
-       actors().add(spawn);
    }
    
    @Override
