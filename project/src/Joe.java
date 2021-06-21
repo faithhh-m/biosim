@@ -30,7 +30,6 @@ public class Joe extends Person{
     @Override
     public void createObject(){
         Person spawn = new Joe(getX(), getY(), actors());
-        actors().add(spawn);
     }
     
     @Override
