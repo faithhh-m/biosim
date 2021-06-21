@@ -108,6 +108,10 @@ public class Person {
         energy--;
     }
     
+    public void changeEnergy(){
+        energy-=100;
+    }
+    
     public void setEnergy(int newEnergy){
         energy = newEnergy;
     }
