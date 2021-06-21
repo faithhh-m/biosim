@@ -12,9 +12,11 @@ public class Joe extends Person{
     public void spawn(){
         if(getAge()>=3){
             double probability = Math.random();
+            Ssytem.out.println(probability);
             if((probability<=0.6)&&(getEnergy()>=900)){
                 createObject();
                 setEnergy(600);
+                System.out.println("Creating new Joe...");
             }
         }
     }
@@ -26,7 +28,6 @@ public class Joe extends Person{
        }
     }
     
-    //check this method
     @Override
     public void createObject(){
         Person spawn = new Joe(getX(), getY(), actors());
@@ -58,4 +59,5 @@ public class Joe extends Person{
     public void create(Graphics draw){
         draw.setColor(getColor());
         draw.fillOval(intX(), intY(), intSize(), intSize());
+    }
 }
