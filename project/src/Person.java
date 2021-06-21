@@ -212,5 +212,6 @@ public class Person {
     public void create(Graphics draw){
         draw.setColor(getColor());
         draw.fillOval(intX(), intY(), intSize(), intSize());
+    }
     
 }
