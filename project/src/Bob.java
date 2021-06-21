@@ -10,9 +10,11 @@ public class Bob extends Person {
    public void spawn(){
        if(getAge()>=3){
            double probability = Math.random();
-           if((probability<=0.4)&&(getEnergy()>=900){
+           System.out.println(probability);
+           if((probability<=0.4)&&(getEnergy()>=900)){
                createObject();
                setEnergy(600);
+               System.out.println("Creating new Bob...");
            }
        }
    }
