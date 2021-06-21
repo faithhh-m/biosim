@@ -132,7 +132,7 @@ public class Person {
         bobcolor=newcolor;
     }
     
-    public double getSize(){
+    public double size(){
         return size;
     }
     
@@ -163,7 +163,7 @@ public class Person {
         for(int k=0;k<actors().size()-1;k++){
             Person thisActor = actors().get(k);
             if(thisActor instanceof Food && thisActor.isThisAlive()){
-                if(distance(thisActor)<thisActor.getSize()){
+                if(distance(thisActor)<thisActor.size()){
                     thisActor.isDead();
                 }
             }
