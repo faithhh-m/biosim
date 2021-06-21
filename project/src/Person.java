@@ -132,7 +132,7 @@ public class Person {
         bobcolor=newcolor;
     }
     
-    public double size(){
+    public double getSize(){
         return size;
     }
     
