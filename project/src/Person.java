@@ -169,6 +169,7 @@ public class Person {
             if(thisActor instanceof Food && thisActor.isThisAlive()){
                 if(distance(thisActor)<thisActor.size()){
                     thisActor.isDead();
+                    energy+=100;
                 }
             }
         }
